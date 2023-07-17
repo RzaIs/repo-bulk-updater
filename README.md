@@ -198,7 +198,7 @@ bulk:
 ```
 
 For more sample code snippets, head over to the
-[example](https://github.com/OpenSourcePB/repo-bulk-updater/tree/main/example) directory.
+[example](https://github.com/OpenSourcePB/repo-bulk-updater/tree/main/examples) directory.
 
 ## _Postscript_
 
