@@ -15,9 +15,6 @@ _The aim of the project is to be automatizing the massive changes of repositorie
 
 ## _How to run_
 
-_You have two options for using tool **locally** and with **GitHub** **actions**._
-
-### _Locally_
 
 _At the first you should install some **dependencies** :_
 
@@ -58,26 +55,6 @@ $ python ./script/main.py <filename> {<org> | <username>} <token>
 >user ([How to create PAT?](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)) \
 > Please be sure that you'd grant **right** scope to token
 
-### _With GitHub actions_
-
-**_For using this tool you should set 2 secrets in GitHub_**
-**_repo_** ([How to set secret?](https://docs.github.com/en/actions/security-guides/encrypted-secrets)) :
-
-> ```GH_ORG``` name of organization (or username of user) in which repo located
-
-> ```GHA_PAT``` personal access token of
->user ([How to create PAT?](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)) \
-> Please be sure that you'd grant **right** scope to token
-
-**_Add command to ```apply.sh``` file_** :
-
-```
-$ python ./script/main.py <filename> 
-```
-
-***Params*** :
-> ```<filename>``` name of the yml \
-> Please provide file name  **without** extension
 
 ## _Templates_
 
@@ -220,6 +197,8 @@ bulk:
     repos: <repos-list-file>
 ```
 
+_**You can find more examples of yml files in  ```examples``` folder **_ :
+
 ## _Postscript_
 
 **_Files locations:_**
@@ -231,11 +210,6 @@ bulk:
 **_Input issues:_**
 
 Please provide correct ```regexp```, you can check your expression on [this](https://regex101.com/) site
-
-**_About PAT:_**
-
-After each run of GitHub actions ```GH_TOKEN```  secret value is reset. This is done for security reasons. You can turn
-off this step by commenting   ```"Updating GitHub PAT from secret to null"``` step in pipeline.
 
 **_Self-preservation_**
 
