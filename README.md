@@ -197,7 +197,8 @@ bulk:
     repos: <repos-list-file>
 ```
 
-_**You can find more examples of yml files in  ```examples``` folder **_ :
+For more sample code snippets, head over to the
+[example](https://github.com/OpenSourcePB/repo-bulk-updater/tree/main/example) directory.
 
 ## _Postscript_
 
@@ -220,3 +221,9 @@ Please comment all commands in ```apply.sh``` to avoid unwanted execution
 ```
 $ gh repo list $ORG -L 1000 --json name --jq '.[].name' >> repo_list/all_org_repos.md
 ```
+
+## License ##
+
+This library is licensed under the MIT License. See
+[LICENSE](https://github.com/OpenSourcePB/repo-bulk-updater/blob/main/LICENSE) for the full
+license text.
