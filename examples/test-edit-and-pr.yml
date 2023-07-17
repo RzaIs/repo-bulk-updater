@@ -1,0 +1,30 @@
+bulk:
+  edit:
+    files:
+      - find-folder: rest
+        changes:
+          - from: logger\..+\);
+            to: ''
+          - from: log\..+\);
+            to: ''
+      - find-folder: test
+        changes:
+          - from: logger\..+\);
+            to: ''
+          - from: log\..+\);
+            to: ''
+    github:
+      branch: test-bulk-pr-script
+      commit: 'Testing bulk pr'
+      cancel:
+        pipeline: true
+    repos: repos.md
+  pr:
+    from: test-bulk-pr-script
+    to: develop
+    name: "Test bulk pr script"
+    body: "Test body"
+    assignee: "@me"
+    cancel:
+      pipeline: true
+    repos: repos.md
